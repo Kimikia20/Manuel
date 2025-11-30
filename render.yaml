@@ -1,0 +1,16 @@
+# Exported from Render on 2025-11-30T05:33:29Z
+version: "1"
+projects:
+- name: My project
+  environments:
+  - name: Production
+    services:
+    - type: web
+      name: Manuel
+      runtime: docker
+      repo: https://github.com/Kimikia20/Manuel
+      plan: free
+      region: oregon
+      dockerContext: .
+      dockerfilePath: ./Dockerfile
+      autoDeployTrigger: commit
